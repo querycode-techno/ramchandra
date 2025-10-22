@@ -1,11 +1,9 @@
+"use client"
+
 import Header from "@/components/header"
 import SiteFooter from "@/components/site-footer"
+import { config } from "@/lib/config"
 import { FileText, AlertCircle, Scale, Truck, Mail, Phone } from "lucide-react"
-
-export const metadata = {
-  title: "Terms & Conditions - Ramchandra Transport",
-  description: "Terms and Conditions for using Ramchandra Transport services",
-}
 
 export default function TermsAndConditions() {
   return (
@@ -377,21 +375,21 @@ export default function TermsAndConditions() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-purple-600" />
-                  <a href={`mailto:${process.env.NEXT_PUBLIC_COMPANY_EMAIL}`} className="text-purple-600 hover:underline">
-                    {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
+                  <a href={`mailto:${config.company.email}`} className="text-purple-600 hover:underline">
+                    {config.company.email}
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-purple-600" />
-                  <a href={`tel:${process.env.NEXT_PUBLIC_COMPANY_PHONE}`} className="text-purple-600 hover:underline">
-                    {process.env.NEXT_PUBLIC_COMPANY_PHONE}
+                  <a href={`tel:${config.company.phone}`} className="text-purple-600 hover:underline">
+                    {config.company.phone}
                   </a>
                 </div>
                 <div className="flex items-start gap-3 mt-4">
                   <div className="w-5 h-5 text-purple-600 mt-1">📍</div>
                   <div className="text-muted-foreground">
-                    {process.env.NEXT_PUBLIC_COMPANY_NAME}<br />
-                    {process.env.NEXT_PUBLIC_COMPANY_ADDRESS}
+                    {config.company.name}<br />
+                    {config.company.address}
                   </div>
                 </div>
               </div>

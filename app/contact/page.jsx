@@ -5,6 +5,7 @@ import Header from "@/components/header"
 import SiteFooter from "@/components/site-footer"
 import { Button } from "@/components/ui/button"
 import { useToast } from "@/hooks/use-toast"
+import { config } from "@/lib/config"
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Users, Award, Truck } from "lucide-react"
 
 export default function Contact() {
@@ -72,7 +73,7 @@ export default function Contact() {
       console.error('Form submission error:', error)
       toast({
         title: "❌ Error Sending Message",
-        description: `Unable to send message. Please try again or contact us directly at ${process.env.NEXT_PUBLIC_COMPANY_EMAIL}`,
+        description: `Unable to send message. Please try again or contact us directly at ${config.company.email}`,
         variant: "destructive",
         duration: 5000,
         className: "bg-gradient-to-r from-red-500 to-red-600 text-white border-none",
@@ -243,8 +244,8 @@ export default function Contact() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-lg text-foreground mb-1">Phone</h4>
-                        <a className="text-muted-foreground hover:text-blue-600 transition-colors text-lg" href={`tel:${process.env.NEXT_PUBLIC_COMPANY_PHONE}`}>
-                          {process.env.NEXT_PUBLIC_COMPANY_PHONE}
+                        <a className="text-muted-foreground hover:text-blue-600 transition-colors text-lg" href={`tel:${config.company.phone}`}>
+                          {config.company.phone}
                         </a>
                         <p className="text-sm text-muted-foreground mt-1">Mon-Fri 9AM-6PM</p>
                       </div>
@@ -256,8 +257,8 @@ export default function Contact() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-lg text-foreground mb-1">Email</h4>
-                        <a className="text-muted-foreground hover:text-green-600 transition-colors text-lg" href={`mailto:${process.env.NEXT_PUBLIC_COMPANY_EMAIL}`}>
-                          {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
+                        <a className="text-muted-foreground hover:text-green-600 transition-colors text-lg" href={`mailto:${config.company.email}`}>
+                          {config.company.email}
                         </a>
                         <p className="text-sm text-muted-foreground mt-1">We'll respond within 24 hours</p>
                       </div>
@@ -270,8 +271,8 @@ export default function Contact() {
                       <div>
                         <h4 className="font-semibold text-lg text-foreground mb-1">Address</h4>
                         <p className="text-muted-foreground text-lg">
-                          {process.env.NEXT_PUBLIC_COMPANY_NAME}<br />
-                          {process.env.NEXT_PUBLIC_COMPANY_ADDRESS}
+                          {config.company.name}<br />
+                          {config.company.address}
                         </p>
                       </div>
                     </div>
@@ -317,7 +318,7 @@ export default function Contact() {
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="w-full h-12 text-base font-semibold border-2 hover:bg-blue-50 dark:hover:bg-blue-950">
-                      <a href={`tel:${process.env.NEXT_PUBLIC_COMPANY_PHONE}`} className="flex items-center gap-2">
+                      <a href={`tel:${config.company.phone}`} className="flex items-center gap-2">
                         <Phone className="h-5 w-5" />
                         Call Now
                       </a>

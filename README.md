@@ -197,3 +197,21 @@ ramchandra/
 ---
 
 **Ready to use!** Just create `.env.local` and start the dev server. 🚀
+
+---
+
+## 🌐 Production Deployment
+
+### Environment Variables in Production
+
+**.env.local is only for local development!**
+
+For production (Vercel, Netlify, etc.):
+
+1. Go to your hosting platform settings
+2. Add all environment variables (from `.env.local`)
+3. Save and **redeploy**
+
+**See `PRODUCTION_SETUP.md` for detailed instructions.**
+
+⚠️ **Important:** Always redeploy after adding/changing environment variables!

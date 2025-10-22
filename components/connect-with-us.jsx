@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useToast } from "@/hooks/use-toast"
+import { config } from "@/lib/config"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 
 export default function ConnectWithUs() {
@@ -112,8 +113,8 @@ export default function ConnectWithUs() {
               <Phone className="h-5 w-5 text-muted-foreground mt-1" aria-hidden="true" />
               <div>
                 <div className="font-medium">Phone</div>
-                <a className="text-muted-foreground hover:underline" href={`tel:${process.env.NEXT_PUBLIC_COMPANY_PHONE}`}>
-                  {process.env.NEXT_PUBLIC_COMPANY_PHONE}
+                <a className="text-muted-foreground hover:underline" href={`tel:${config.company.phone}`}>
+                  {config.company.phone}
                 </a>
               </div>
             </div>
@@ -121,8 +122,8 @@ export default function ConnectWithUs() {
               <Mail className="h-5 w-5 text-muted-foreground mt-1" aria-hidden="true" />
               <div>
                 <div className="font-medium">Email</div>
-                <a className="text-muted-foreground hover:underline" href={`mailto:${process.env.NEXT_PUBLIC_COMPANY_EMAIL}`}>
-                  {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
+                <a className="text-muted-foreground hover:underline" href={`mailto:${config.company.email}`}>
+                  {config.company.email}
                 </a>
               </div>
             </div>
@@ -131,7 +132,7 @@ export default function ConnectWithUs() {
               <div>
                 <div className="font-medium">Address</div>
                 <p className="text-muted-foreground">
-                  {process.env.NEXT_PUBLIC_COMPANY_NAME}, {process.env.NEXT_PUBLIC_COMPANY_ADDRESS}
+                  {config.company.name}, {config.company.address}
                 </p>
               </div>
             </div>

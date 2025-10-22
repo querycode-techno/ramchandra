@@ -5,6 +5,7 @@ import Header from "@/components/header"
 import SiteFooter from "@/components/site-footer"
 import { Button } from "@/components/ui/button"
 import { useToast } from "@/hooks/use-toast"
+import { config } from "@/lib/config"
 import { 
   Send, 
   CheckCircle, 
@@ -113,7 +114,7 @@ export default function RequestQuote() {
       console.error('Form submission error:', error)
       toast({
         title: "❌ Error Submitting Request",
-        description: `Unable to submit quote request. Please try again or contact us directly at ${process.env.NEXT_PUBLIC_COMPANY_EMAIL}`,
+        description: `Unable to submit quote request. Please try again or contact us directly at ${config.company.email}`,
         variant: "destructive",
         duration: 5000,
         className: "bg-gradient-to-r from-red-500 to-red-600 text-white border-none",
@@ -472,8 +473,8 @@ export default function RequestQuote() {
                       </div>
                       <div>
                         <div className="font-semibold text-foreground">Call Us</div>
-                        <a className="text-muted-foreground hover:text-blue-600 transition-colors" href={`tel:${process.env.NEXT_PUBLIC_COMPANY_PHONE}`}>
-                          {process.env.NEXT_PUBLIC_COMPANY_PHONE}
+                        <a className="text-muted-foreground hover:text-blue-600 transition-colors" href={`tel:${config.company.phone}`}>
+                          {config.company.phone}
                         </a>
                       </div>
                     </div>
@@ -483,8 +484,8 @@ export default function RequestQuote() {
                       </div>
                       <div>
                         <div className="font-semibold text-foreground">Email Us</div>
-                        <a className="text-muted-foreground hover:text-green-600 transition-colors" href={`mailto:${process.env.NEXT_PUBLIC_COMPANY_EMAIL}`}>
-                          {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
+                        <a className="text-muted-foreground hover:text-green-600 transition-colors" href={`mailto:${config.company.email}`}>
+                          {config.company.email}
                         </a>
                       </div>
                     </div>
@@ -495,8 +496,8 @@ export default function RequestQuote() {
                       <div>
                         <div className="font-semibold text-foreground">Visit Us</div>
                         <p className="text-muted-foreground text-sm">
-                          {process.env.NEXT_PUBLIC_COMPANY_NAME}<br />
-                          {process.env.NEXT_PUBLIC_COMPANY_ADDRESS}
+                          {config.company.name}<br />
+                          {config.company.address}
                         </p>
                       </div>
                     </div>
