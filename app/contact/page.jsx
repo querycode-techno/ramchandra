@@ -31,25 +31,55 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        toast({
+          title: "✅ Message Sent Successfully!",
+          description: "Thank you for contacting Ramchandra Transport. We'll get back to you within 24 hours.",
+          duration: 5000,
+          className: "bg-gradient-to-r from-blue-500 to-blue-600 text-white border-none",
+        })
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          service: '',
+          message: ''
+        })
+      } else {
+        toast({
+          title: "❌ Error Sending Message",
+          description: data.message || "Something went wrong. Please try again or contact us directly.",
+          variant: "destructive",
+          duration: 5000,
+          className: "bg-gradient-to-r from-red-500 to-red-600 text-white border-none",
+        })
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
       toast({
-        title: "Message Sent Successfully! 🎉",
-        description: "Thank you for contacting Ramchandra Transport. We'll get back to you within 24 hours.",
+        title: "❌ Error Sending Message",
+        description: `Unable to send message. Please try again or contact us directly at ${process.env.NEXT_PUBLIC_COMPANY_EMAIL}`,
+        variant: "destructive",
         duration: 5000,
+        className: "bg-gradient-to-r from-red-500 to-red-600 text-white border-none",
       })
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        message: ''
-      })
-    }, 2000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -213,8 +243,8 @@ export default function Contact() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-lg text-foreground mb-1">Phone</h4>
-                        <a className="text-muted-foreground hover:text-blue-600 transition-colors text-lg" href="tel:+911234567890">
-                          +91 12345 67890
+                        <a className="text-muted-foreground hover:text-blue-600 transition-colors text-lg" href={`tel:${process.env.NEXT_PUBLIC_COMPANY_PHONE}`}>
+                          {process.env.NEXT_PUBLIC_COMPANY_PHONE}
                         </a>
                         <p className="text-sm text-muted-foreground mt-1">Mon-Fri 9AM-6PM</p>
                       </div>
@@ -226,8 +256,8 @@ export default function Contact() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-lg text-foreground mb-1">Email</h4>
-                        <a className="text-muted-foreground hover:text-green-600 transition-colors text-lg" href="mailto:info@ramchandratransport.com">
-                          info@ramchandratransport.com
+                        <a className="text-muted-foreground hover:text-green-600 transition-colors text-lg" href={`mailto:${process.env.NEXT_PUBLIC_COMPANY_EMAIL}`}>
+                          {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
                         </a>
                         <p className="text-sm text-muted-foreground mt-1">We'll respond within 24 hours</p>
                       </div>
@@ -240,9 +270,8 @@ export default function Contact() {
                       <div>
                         <h4 className="font-semibold text-lg text-foreground mb-1">Address</h4>
                         <p className="text-muted-foreground text-lg">
-                          Ramchandra Transport<br />
-                          1st Floor, Business Park<br />
-                          New Delhi, India 110001
+                          {process.env.NEXT_PUBLIC_COMPANY_NAME}<br />
+                          {process.env.NEXT_PUBLIC_COMPANY_ADDRESS}
                         </p>
                       </div>
                     </div>
@@ -288,7 +317,7 @@ export default function Contact() {
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="w-full h-12 text-base font-semibold border-2 hover:bg-blue-50 dark:hover:bg-blue-950">
-                      <a href="tel:+911234567890" className="flex items-center gap-2">
+                      <a href={`tel:${process.env.NEXT_PUBLIC_COMPANY_PHONE}`} className="flex items-center gap-2">
                         <Phone className="h-5 w-5" />
                         Call Now
                       </a>

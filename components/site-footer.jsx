@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function SiteFooter() {
   const year = new Date().getFullYear()
   return (
@@ -18,19 +20,19 @@ export default function SiteFooter() {
             <h3 className="text-sm font-semibold mb-3">Company</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="/about-us" className="hover:underline">
+                <Link href="/about-us" className="hover:underline">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about-us/team" className="hover:underline">
+                <Link href="/about-us/team" className="hover:underline">
                   Our Team
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about-us/careers" className="hover:underline">
+                <Link href="/about-us/careers" className="hover:underline">
                   Careers
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -39,24 +41,24 @@ export default function SiteFooter() {
             <h3 className="text-sm font-semibold mb-3">Execution</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="/execution/contract-logistics" className="hover:underline">
+                <Link href="/execution/contract-logistics" className="hover:underline">
                   Contract Logistics
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/execution/express-logistics" className="hover:underline">
+                <Link href="/execution/express-logistics" className="hover:underline">
                   Express Logistics
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/execution/last-mile" className="hover:underline">
+                <Link href="/execution/last-mile" className="hover:underline">
                   Last Mile Delivery
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/execution/after-market" className="hover:underline">
+                <Link href="/execution/after-market" className="hover:underline">
                   After Market
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -91,15 +93,15 @@ export default function SiteFooter() {
         <div className="mt-8 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-muted-foreground">© {year} Ramchandra Transport. All rights reserved.</p>
           <div className="flex items-center gap-4 text-xs text-muted-foreground">
-            <a href="/privacy" className="hover:underline">
+            <Link href="/privacy" className="hover:underline">
               Privacy
-            </a>
-            <a href="/terms" className="hover:underline">
+            </Link>
+            <Link href="/terms" className="hover:underline">
               Terms
-            </a>
-            <a href="/contact" className="hover:underline">
+            </Link>
+            <Link href="/contact" className="hover:underline">
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </div>

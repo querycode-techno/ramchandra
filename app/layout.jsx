@@ -1,5 +1,6 @@
 import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
+import { Toaster } from "@/components/ui/toaster"
 import "./globals.css"
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Suspense fallback={null}>{children}</Suspense>
+        <Toaster />
         <Analytics />
       </body>
     </html>

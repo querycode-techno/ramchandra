@@ -61,36 +61,66 @@ export default function RequestQuote() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
+    try {
+      const response = await fetch('/api/quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        toast({
+          title: "✅ Quote Request Submitted!",
+          description: "Thank you for your request. Our team will review your requirements and provide a customized quote within 24 hours.",
+          duration: 5000,
+          className: "bg-gradient-to-r from-green-500 to-emerald-600 text-white border-none",
+        })
+        
+        // Reset form
+        setFormData({
+          companyName: '',
+          contactPerson: '',
+          email: '',
+          phone: '',
+          website: '',
+          serviceType: '',
+          industry: '',
+          origin: '',
+          destination: '',
+          frequency: '',
+          cargoType: '',
+          weight: '',
+          volume: '',
+          specialRequirements: '',
+          timeline: '',
+          budget: '',
+          additionalInfo: ''
+        })
+      } else {
+        toast({
+          title: "❌ Error Submitting Request",
+          description: data.message || "Something went wrong. Please try again or contact us directly.",
+          variant: "destructive",
+          duration: 5000,
+          className: "bg-gradient-to-r from-red-500 to-red-600 text-white border-none",
+        })
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
       toast({
-        title: "Quote Request Submitted! 🎉",
-        description: "Thank you for your request. Our team will review your requirements and provide a customized quote within 24 hours.",
+        title: "❌ Error Submitting Request",
+        description: `Unable to submit quote request. Please try again or contact us directly at ${process.env.NEXT_PUBLIC_COMPANY_EMAIL}`,
+        variant: "destructive",
         duration: 5000,
+        className: "bg-gradient-to-r from-red-500 to-red-600 text-white border-none",
       })
-      
-      // Reset form
-      setFormData({
-        companyName: '',
-        contactPerson: '',
-        email: '',
-        phone: '',
-        website: '',
-        serviceType: '',
-        industry: '',
-        origin: '',
-        destination: '',
-        frequency: '',
-        cargoType: '',
-        weight: '',
-        volume: '',
-        specialRequirements: '',
-        timeline: '',
-        budget: '',
-        additionalInfo: ''
-      })
-    }, 2000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -442,8 +472,8 @@ export default function RequestQuote() {
                       </div>
                       <div>
                         <div className="font-semibold text-foreground">Call Us</div>
-                        <a className="text-muted-foreground hover:text-blue-600 transition-colors" href="tel:+911234567890">
-                          +91 12345 67890
+                        <a className="text-muted-foreground hover:text-blue-600 transition-colors" href={`tel:${process.env.NEXT_PUBLIC_COMPANY_PHONE}`}>
+                          {process.env.NEXT_PUBLIC_COMPANY_PHONE}
                         </a>
                       </div>
                     </div>
@@ -453,8 +483,8 @@ export default function RequestQuote() {
                       </div>
                       <div>
                         <div className="font-semibold text-foreground">Email Us</div>
-                        <a className="text-muted-foreground hover:text-green-600 transition-colors" href="mailto:quotes@ramchandratransport.com">
-                          quotes@ramchandratransport.com
+                        <a className="text-muted-foreground hover:text-green-600 transition-colors" href={`mailto:${process.env.NEXT_PUBLIC_COMPANY_EMAIL}`}>
+                          {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
                         </a>
                       </div>
                     </div>
@@ -465,8 +495,8 @@ export default function RequestQuote() {
                       <div>
                         <div className="font-semibold text-foreground">Visit Us</div>
                         <p className="text-muted-foreground text-sm">
-                          Ramchandra Transport<br />
-                          New Delhi, India
+                          {process.env.NEXT_PUBLIC_COMPANY_NAME}<br />
+                          {process.env.NEXT_PUBLIC_COMPANY_ADDRESS}
                         </p>
                       </div>
                     </div>
