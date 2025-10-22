@@ -14,7 +14,28 @@ All 3 contact forms are integrated with **Brevo email service**. Each form sends
 
 #### 1. Create `.env.local` File
 
+Create a file named `.env.local` in the project root folder.
 
+**Content:**
+```env
+BREVO_API_KEY=your-brevo-api-key-here
+BREVO_SENDER_EMAIL=your-email@example.com
+BREVO_SENDER_NAME=Your Company Name
+
+NEXT_PUBLIC_COMPANY_NAME=Your Company Name
+NEXT_PUBLIC_COMPANY_EMAIL=your-email@example.com
+NEXT_PUBLIC_COMPANY_PHONE=+91 XXXXX XXXXX
+NEXT_PUBLIC_COMPANY_ADDRESS=Your Company Address
+NEXT_PUBLIC_COMPANY_WEBSITE=https://yourwebsite.com
+
+COMPANY_NAME=Your Company Name
+COMPANY_EMAIL=your-email@example.com
+COMPANY_PHONE=+91 XXXXX XXXXX
+COMPANY_ADDRESS=Your Company Address
+COMPANY_WEBSITE=https://yourwebsite.com
+```
+
+#### 2. Restart Development Server
 
 ```bash
 npm run dev
@@ -50,25 +71,7 @@ npm run dev
 
 ### To Update for Client
 
-Edit `.env.local` file with client's information:
-
-```env
-BREVO_API_KEY=client-api-key
-BREVO_SENDER_EMAIL=client@company.com
-BREVO_SENDER_NAME=Client Company
-
-NEXT_PUBLIC_COMPANY_NAME=Client Company
-NEXT_PUBLIC_COMPANY_EMAIL=client@company.com
-NEXT_PUBLIC_COMPANY_PHONE=+91 XXXXX XXXXX
-NEXT_PUBLIC_COMPANY_ADDRESS=Client Address
-NEXT_PUBLIC_COMPANY_WEBSITE=https://clientwebsite.com
-
-COMPANY_NAME=Client Company
-COMPANY_EMAIL=client@company.com
-COMPANY_PHONE=+91 XXXXX XXXXX
-COMPANY_ADDRESS=Client Address
-COMPANY_WEBSITE=https://clientwebsite.com
-```
+Edit `.env.local` file with client's information and update all the values.
 
 Then restart the server. **Done!** All pages update automatically.
 
@@ -197,21 +200,3 @@ ramchandra/
 ---
 
 **Ready to use!** Just create `.env.local` and start the dev server. 🚀
-
----
-
-## 🌐 Production Deployment
-
-### Environment Variables in Production
-
-**.env.local is only for local development!**
-
-For production (Vercel, Netlify, etc.):
-
-1. Go to your hosting platform settings
-2. Add all environment variables (from `.env.local`)
-3. Save and **redeploy**
-
-**See `PRODUCTION_SETUP.md` for detailed instructions.**
-
-⚠️ **Important:** Always redeploy after adding/changing environment variables!
