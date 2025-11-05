@@ -24,7 +24,7 @@ export default function SiteFooter() {
                   About Us
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/about-us/team" className="hover:underline">
                   Our Team
                 </Link>
@@ -33,7 +33,7 @@ export default function SiteFooter() {
                 <Link href="/about-us/careers" className="hover:underline">
                   Careers
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

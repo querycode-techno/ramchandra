@@ -4,12 +4,24 @@ import Autoplay from "embla-carousel-autoplay"
 
 export default function OurClients() {
   const clientLogos = [
-    { src: "/placeholder.svg?key=client1", alt: "Client Logo 1" },
-    { src: "/placeholder.svg?key=client2", alt: "Client Logo 2" },
-    { src: "/placeholder.svg?key=client3", alt: "Client Logo 3" },
-    { src: "/placeholder.svg?key=client4", alt: "Client Logo 4" },
-    { src: "/placeholder.svg?key=client5", alt: "Client Logo 5" },
-    { src: "/placeholder.svg?key=client6", alt: "Client Logo 6" },
+    { src: "/brands/flipkart.png", alt: "Flipkart" },
+    { src: "/brands/amazon.png", alt: "Amazon" },
+    { src: "/brands/messho.png", alt: "Messho" },
+    { src: "/brands/minutes.png", alt: "Minutes" },
+    { src: "/brands/blinkit.png", alt: "Blinkit" },
+    { src: "/brands/dabur.png", alt: "Dabur" },
+    { src: "/brands/delhivery.png", alt: "Delhivery" },
+    { src: "/brands/ecom-express.png", alt: "Ecom Express" },
+    { src: "/brands/elasticrun.png", alt: "Elasticrun" },
+    { src: "/brands/jumbotail.png", alt: "Jumbotail" },
+    { src: "/brands/loadshare.png", alt: "Loadshare" },
+    { src: "/brands/methodex.png", alt: "Ecom Express" },
+    { src: "/brands/physicswallah.png", alt: "Physics Wallah" },
+    { src: "/brands/pidilite-seeklogo.png", alt: "Ecom Express" },
+    { src: "/brands/shadowfax.png", alt: "Ecom Express" },
+    { src: "/brands/tvsupply.png", alt: "Ecom Express" },
+    { src: "/brands/udaan.png", alt: "Ecom Express" },
+    { src: "/brands/xpIndia.png", alt: "Ecom Express" },
   ]
 
   return (
@@ -36,11 +48,11 @@ export default function OurClients() {
             {clientLogos.map((logo, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6">
                 <div className="p-2 md:p-4">
-                  <div className="bg-white dark:bg-slate-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow duration-300">
+                  <div className="bg-white dark:bg-slate-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700">
                     <img
                       src={logo.src || "/placeholder.svg"}
                       alt={logo.alt}
-                      className="w-full h-16 md:h-20 object-contain grayscale opacity-75 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+                      className="w-full h-16 md:h-20 object-contain"
                     />
                   </div>
                 </div>
