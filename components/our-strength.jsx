@@ -54,21 +54,33 @@ export default function OurStrength() {
         {/* Strengths Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center">
-            <img src="/global-reach-icon.jpg" alt="Global Reach Icon" className="mb-4" />
+            <img
+              src="/global-reach.webp"
+              alt="Global Reach Icon"
+              className="mb-4 h-60 w-full rounded-xl object-contain"
+            />
             <h3 className="text-2xl font-semibold mb-2">Global Reach</h3>
             <p className="text-center text-muted-foreground">
               Extensive network spanning continents, ensuring your cargo reaches its destination, no matter how far.
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <img src="/advanced-technology-icon.jpg" alt="Advanced Technology Icon" className="mb-4" />
+            <img
+              src="/advanced-technology.webp"
+              alt="Advanced Technology Icon"
+              className="mb-4 h-60 w-full rounded-xl object-contain"
+            />
             <h3 className="text-2xl font-semibold mb-2">Advanced Technology</h3>
             <p className="text-center text-muted-foreground">
               Utilizing the latest innovations in logistics to provide real-time tracking and optimized routes.
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <img src="/expert-team-icon.png" alt="Expert Team Icon" className="mb-4" />
+            <img
+              src="/expert-team.webp"
+              alt="Expert Team Icon"
+              className="mb-4 h-60 w-full rounded-xl object-contain"
+            />
             <h3 className="text-2xl font-semibold mb-2">Expert Team</h3>
             <p className="text-center text-muted-foreground">
               A team of seasoned professionals dedicated to handling your logistics needs with precision and care.

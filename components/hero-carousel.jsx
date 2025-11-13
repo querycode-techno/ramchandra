@@ -12,22 +12,22 @@ const heroSlides = [
     id: 1,
     title: "Empowering Global Supply Chains",
     subtitle: "End-to-end logistics, advisory, and technology solutions designed for speed, visibility, and growth.",
-    image: "/logistics-warehouse-trucks.png",
+    image: "/1201.jpg",
     secondaryButton: { text: "Contact Us", href: "/contact" }
   },
   {
     id: 2,
     title: "Reliable Transportation Solutions",
     subtitle: "Connecting businesses across India with efficient logistics.",
-    image: "/logistics-warehouse-trucks.png",
+    image: "/1202.jpg",
     secondaryButton: { text: "Learn More", href: "/about-us" }
   },
   {
     id: 3,
     title: "Advanced Control Tower Technology",
     subtitle: "Real-time visibility and proactive management of your shipments.",
-    image: "/logistics-warehouse-trucks.png",
-    secondaryButton: { text: "Industries", href: "/industries" }
+    image: "/1203.jpg",
+    secondaryButton: { text: "Control Tower", href: "/control-tower" }
   }
 ]
 

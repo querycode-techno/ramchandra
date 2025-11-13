@@ -164,20 +164,13 @@ export default function Industries() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-r from-blue-900/80 to-blue-700/80">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/logistics-warehouse-trucks.png"
-            alt="Industries background"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <div className="relative z-10 text-center text-white px-6 sm:px-8 lg:px-12">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            Industries
-          </h1>
+      <section className="bg-blue-900 py-32 text-white md:py-32">
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="text-5xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl">
+              Industries
+            </h1>
+          </div>
         </div>
       </section>
 

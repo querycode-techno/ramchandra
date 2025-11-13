@@ -33,22 +33,12 @@ export default function DistributionManagement() {
       <Header />
       <main className="flex-1 pt-16">
         {/* Hero Section */}
-        <section className="py-20 md:py-32 relative overflow-hidden">
-          <div className="absolute inset-0">
-            <img
-              src="/placeholder.svg?key=distribution-management-hero"
-              alt="Distribution Management Background"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-blue-900/60"></div>
-          </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-7xl mx-auto text-center">
-              <div className="space-y-8">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-balance leading-tight text-white">
-                  Distribution Management
-                </h1>
-              </div>
+        <section className="bg-blue-900 py-20 text-white md:py-32">
+          <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl text-center">
+              <h1 className="text-5xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl">
+                Distribution Management
+              </h1>
             </div>
           </div>
         </section>
@@ -61,7 +51,7 @@ export default function DistributionManagement() {
                 <div className="lg:order-2">
                   <div className="relative">
                     <img
-                      src="/placeholder.svg?key=distribution-interface"
+                      src="/large-distribution-center.jpg"
                       alt="Distribution Interface"
                       className="rounded-xl object-cover w-full h-[450px] lg:h-[500px] shadow-lg"
                     />
@@ -135,7 +125,7 @@ export default function DistributionManagement() {
                 </div>
                 <div className="relative">
                   <img
-                    src="/placeholder.svg?key=multimodal-transportation"
+                    src="/multimodal.webp"
                     alt="Multimodal Transportation"
                     className="rounded-xl object-cover w-full h-[450px] lg:h-[500px] shadow-lg"
                   />
@@ -153,7 +143,7 @@ export default function DistributionManagement() {
                 <div className="lg:order-2">
                   <div className="relative">
                     <img
-                      src="/placeholder.svg?key=ftl-ptl-transportation"
+                      src="/ftl.webp"
                       alt="FTL/PTL Transportation"
                       className="rounded-xl object-cover w-full h-[450px] lg:h-[500px] shadow-lg"
                     />

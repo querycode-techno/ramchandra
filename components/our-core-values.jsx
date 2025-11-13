@@ -1,32 +1,34 @@
+import { Award, Leaf, Lightbulb, ShieldCheck, Users2, Workflow } from "lucide-react"
+
 export default function OurCoreValues() {
   const coreValues = [
     {
-      icon: "/placeholder.svg?key=integrity",
+      icon: ShieldCheck,
       title: "Integrity",
       description: "Upholding the highest ethical standards in all our operations and interactions.",
     },
     {
-      icon: "/placeholder.svg?key=innovation",
+      icon: Lightbulb,
       title: "Innovation",
       description: "Continuously seeking new and better ways to deliver logistics solutions.",
     },
     {
-      icon: "/placeholder.svg?key=excellence",
+      icon: Award,
       title: "Excellence",
       description: "Striving for superior quality and performance in every aspect of our service.",
     },
     {
-      icon: "/placeholder.svg?key=customer-focus",
+      icon: Users2,
       title: "Customer Focus",
       description: "Prioritizing our clients' needs and building lasting relationships based on trust.",
     },
     {
-      icon: "/placeholder.svg?key=sustainability",
+      icon: Leaf,
       title: "Sustainability",
       description: "Committed to environmentally responsible practices and sustainable growth.",
     },
     {
-      icon: "/placeholder.svg?key=teamwork",
+      icon: Workflow,
       title: "Teamwork",
       description: "Fostering a collaborative environment where every team member contributes to success.",
     },
@@ -42,7 +44,9 @@ export default function OurCoreValues() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {coreValues.map((value, index) => (
             <div key={index} className="flex flex-col items-center p-6 bg-card rounded-lg shadow-md">
-              <img src={value.icon || "/placeholder.svg"} alt={value.title} className="mb-4 h-12 w-12" />
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <value.icon className="h-8 w-8" aria-hidden="true" />
+              </div>
               <h3 className="text-2xl font-semibold mb-2">{value.title}</h3>
               <p className="text-center text-muted-foreground">{value.description}</p>
             </div>

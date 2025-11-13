@@ -2,15 +2,11 @@
 
 import Header from "@/components/header"
 import SiteFooter from "@/components/site-footer"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Shield, DollarSign, Building, Clock, Monitor, Users } from "lucide-react"
 import Image from "next/image"
-import { useState } from "react"
 
 export default function AfterMarketManagement() {
-  const [selectedOffering, setSelectedOffering] = useState(null)
 
   const benefits = [
     {
@@ -52,44 +48,51 @@ export default function AfterMarketManagement() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-r from-blue-900/80 to-blue-700/80">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/logistics-warehouse-trucks.png"
-            alt="Logistics background"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <div className="relative z-10 text-center text-white px-6 sm:px-8 lg:px-12">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            After Market Management
-          </h1>
-          
+      <section className="bg-blue-900 py-32 text-white md:py-32">
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="text-5xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl">
+              After Market Management
+            </h1>
+          </div>
         </div>
       </section>
 
       {/* Aftermarket Excellence Section */}
       <section className="py-20 sm:py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-            <div className="order-2 lg:order-1">
-              <Image
-                src="/logistics-warehouse-trucks.png"
-                alt="Aftermarket management service"
-                width={600}
-                height={400}
-                className="rounded-xl shadow-2xl w-full h-auto"
-              />
-            </div>
-            <div className="order-1 lg:order-2 space-y-6">
+          <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-20">
+            <div className="order-2 lg:order-1 space-y-6">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 leading-tight">
                 Aftermarket Excellence: Let's Partner for Streamlined Supply Chain Execution
               </h2>
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed text-justify">
                 Aftermarket management encompasses the strategic oversight and execution of post-sale activities that extend throughout the entire product lifecycle. This comprehensive approach involves managing spare parts inventory, handling warranty claims, processing returns, and ensuring optimal customer support long after the initial sale. At Patliputra Logistics, we specialize in providing end-to-end aftermarket solutions that optimize inventory levels, reduce operational costs, and enhance customer satisfaction. Our aftermarket management services are designed to create sustainable revenue streams while maintaining cost-effective operations and ensuring long-term customer relationships.
               </p>
+            </div>
+            <div className="order-1 lg:order-2">
+              <div className="relative mx-auto flex h-72 w-72 items-center justify-center overflow-hidden rounded-3xl bg-blue-50 shadow-2xl sm:h-80 sm:w-80 lg:h-96 lg:w-96">
+                <svg
+                  viewBox="0 0 200 200"
+                  className="absolute inset-0 h-full w-full text-blue-100"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M43.1,-54.3C55.8,-43.2,66.7,-28.1,69.4,-11.5C72.2,5,66.8,22.8,56.5,38.2C46.2,53.6,30.9,66.6,13.3,70.4C-4.3,74.2,-24.1,68.9,-39.5,57.1C-54.9,45.3,-65.9,27,-69.7,7.3C-73.5,-12.3,-70.1,-32.6,-58.7,-45.3C-47.4,-58,-28.2,-63.1,-10.1,-60.6C8,-58.1,16,-48,27.4,-45.4C38.8,-42.8,54.3,-47.8,43.1,-54.3Z"
+                  />
+                </svg>
+                <div className="relative z-10 flex flex-col items-center gap-4 text-center">
+                  <Shield className="h-12 w-12 text-blue-600" aria-hidden="true" />
+                  <p className="max-w-xs text-base text-blue-900">
+                    End-to-end aftermarket solutions built on reliability, proactive service, and measurable impact.
+                  </p>
+                  <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-wide text-blue-700">
+                    <span className="h-2 w-2 rounded-full bg-blue-500" />
+                    Powered by RTS
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

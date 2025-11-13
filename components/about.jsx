@@ -4,7 +4,7 @@ export default function AboutUs() {
       <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="lg:order-2">
           <img
-            src="/placeholder.svg?key=21234"
+            src="/large-distribution-center.jpg"
             alt="About Us Image"
             className="rounded-lg object-cover w-full h-[400px]"
           />

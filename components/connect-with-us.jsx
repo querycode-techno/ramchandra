@@ -131,7 +131,7 @@ export default function ConnectWithUs() {
               <div>
                 <div className="font-medium">Address</div>
                 <p className="text-muted-foreground">
-                  {process.env.NEXT_PUBLIC_COMPANY_NAME}, {process.env.NEXT_PUBLIC_COMPANY_ADDRESS}
+                   {process.env.NEXT_PUBLIC_COMPANY_ADDRESS}
                 </p>
               </div>
             </div>

@@ -17,7 +17,7 @@ export default function Technology() {
         </div>
         <div>
           <img
-            src="/placeholder.svg?key=technology"
+            src="/advanced-technology.webp"
             alt="Technology in Logistics"
             className="rounded-lg object-cover w-full h-[400px]"
           />

@@ -48,7 +48,7 @@ export default function LastMileDelivery() {
   const offerings = [
     {
       title: "Hyper Local Delivery",
-      image: "/placeholder.jpg",
+      image: "/local.webp",
       description: "Fast and reliable local delivery services",
       detailedDescription: "Hyperlocal delivery stands as a specialized and highly targeted service tailored to meet the swift delivery needs within specific local or limited areas. It is designed with a singular focus on achieving exceptionally fast delivery times, making it an ideal choice for transporting items that demand rapid and efficient transportation. This delivery model is particularly well-suited for handling a diverse range of products, including perishable goods like vegetables and fruits, everyday essentials like groceries, as well as pharmaceutical items such as medicines. Its niche lies in catering to the immediate needs of customers within a confined geographic area, ensuring that their orders are promptly fulfilled, thereby enhancing customer satisfaction and loyalty. The unique characteristic of hyperlocal delivery is its ability to streamline the logistics process for small-scale products, where speed and reliability are paramount.",
       features: [
@@ -61,7 +61,7 @@ export default function LastMileDelivery() {
     },
     {
       title: "Dark Store Service",
-      image: "/placeholder.jpg", 
+      image: "/large-distribution-center.jpg", 
       description: "Efficient warehouse and storage solutions",
       detailedDescription: "Dark stores, also referred to as dark supermarkets or virtual supermarkets, represent a groundbreaking concept in the realm of retail fulfillment. These specialized fulfillment centers are purposefully designed to cater exclusively to online orders, with no provision for walk-in customers. The rise of dark stores is a direct response to the surging demand for efficient and seamless online order fulfillment in the retail industry. ",
       features: [
@@ -74,7 +74,7 @@ export default function LastMileDelivery() {
     },
     {
       title: "Same Day Delivery",
-      image: "/placeholder.jpg",
+      image: "/sameday.webp",
       description: "Quick same-day delivery for urgent shipments",
       detailedDescription: "Just in time delivery is a strategy that ensures goods are delivered to the recipient exactly when they are needed, eliminating the need for excess inventory storage. This approach optimizes supply chain efficiency by reducing carrying costs and minimizing waste. JIT delivery enables businesses to respond swiftly to fluctuating demand and maintain lean operations. Customers benefit from timely deliveries, ensuring they receive products precisely when required, enhancing their overall satisfaction.",
       features: [
@@ -92,21 +92,13 @@ export default function LastMileDelivery() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-r from-blue-900/80 to-blue-700/80">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/logistics-warehouse-trucks.png"
-            alt="Logistics background"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <div className="relative z-10 text-center text-white px-6 sm:px-8 lg:px-12">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            Last Mile Delivery
-          </h1>
-          
+      <section className="bg-blue-900 py-32 text-white md:py-32">
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="text-5xl font-bold leading-tight text-balance md:text-6xl lg:text-7xl">
+              Last Mile Delivery
+            </h1>
+          </div>
         </div>
       </section>
 
@@ -116,7 +108,7 @@ export default function LastMileDelivery() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             <div className="order-2 lg:order-1">
               <Image
-                src="/logistics-warehouse-trucks.png"
+                src="/lastmile.webp"
                 alt="Last mile delivery service"
                 width={600}
                 height={400}
