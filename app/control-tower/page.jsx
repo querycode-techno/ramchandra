@@ -336,7 +336,7 @@ export default function ControlTower() {
               Our Technology
             </h2>
             <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-4xl mx-auto">
-              Patliputra Logistics is a leader in supply chain management, emphasizing our commitment to providing efficient, reliable, and innovative solutions that drive operational excellence and customer satisfaction.
+              Ramchandra Transport is a leader in supply chain management, emphasizing our commitment to providing efficient, reliable, and innovative solutions that drive operational excellence and customer satisfaction.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
