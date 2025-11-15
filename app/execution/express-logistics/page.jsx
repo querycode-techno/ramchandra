@@ -69,13 +69,13 @@ export default function ExpressLogistics() {
             </div>
             <div className="order-1 lg:order-2 space-y-6">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 leading-tight">
-                Sm Express Logistics
+                Ramchandra Transport
               </h2>
               <p className="text-xl lg:text-2xl text-blue-800 font-medium leading-relaxed">
                 Speedy Service, Solid Solutions Your Express Ticket to Effortless Deliveries.
               </p>
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed">
-                Sm Express logistics is a specialized and vital segment within the broader logistics industry that focuses on providing fast, time-sensitive delivery services. At Patliputra Logistics, we take pride in offering comprehensive express logistics services that cater to the urgent transportation needs of our clients. Our express logistics solutions are designed to deliver goods quickly and efficiently, ensuring that time-critical shipments reach their destinations on schedule.
+                Ramchandra Transport is a specialized and vital segment within the broader logistics industry that focuses on providing fast, time-sensitive delivery services. At Ramchandra Transport, we take pride in offering comprehensive express logistics services that cater to the urgent transportation needs of our clients. Our express logistics solutions are designed to deliver goods quickly and efficiently, ensuring that time-critical shipments reach their destinations on schedule.
               </p>
             </div>
           </div>

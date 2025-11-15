@@ -97,7 +97,7 @@ export default function Industries() {
   {
     title: "Pharmaceutical",
     description: "Pharmaceutical supply chain solutions",
-    detailedDescription: "Patliputra Logistics provides comprehensive logistics solutions designed specifically for the pharmaceutical sector. Our services are tailored to meet the stringent requirements of the industry, ensuring the safe, compliant, and efficient transportation, storage, and distribution of pharmaceutical products. We prioritize product integrity, regulatory compliance, and on-time delivery to support the critical needs of the pharmaceutical supply chain.",
+    detailedDescription: "Ramchandra Transport provides comprehensive logistics solutions designed specifically for the pharmaceutical sector. Our services are tailored to meet the stringent requirements of the industry, ensuring the safe, compliant, and efficient transportation, storage, and distribution of pharmaceutical products. We prioritize product integrity, regulatory compliance, and on-time delivery to support the critical needs of the pharmaceutical supply chain.",
     icon: Beaker,
     benefits: [
       "Regulatory Compliance",
@@ -113,7 +113,7 @@ export default function Industries() {
   {
     title: "Beverages",
     description: "Beverage manufacturers logistics solutions",
-    detailedDescription: "In the dynamic Beverage Manufacturers sector, Patliputra Logistics stands out as a leading provider of specialized logistics solutions. Leveraging our expertise, we offer a range of services tailored to the unique needs of beverage companies. Our offerings include temperature-controlled storage facilities, efficient distribution networks, and precise delivery management systems. By partnering with us, beverage companies can streamline their supply chains, ensuring timely deliveries and meeting customer demands with precision and excellence.",
+    detailedDescription: "In the dynamic Beverage Manufacturers sector, Ramchandra Transport stands out as a leading provider of specialized logistics solutions. Leveraging our expertise, we offer a range of services tailored to the unique needs of beverage companies. Our offerings include temperature-controlled storage facilities, efficient distribution networks, and precise delivery management systems. By partnering with us, beverage companies can streamline their supply chains, ensuring timely deliveries and meeting customer demands with precision and excellence.",
     icon: Heart,
     benefits: [
       "Efficient Operations",

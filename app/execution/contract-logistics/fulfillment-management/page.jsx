@@ -60,7 +60,7 @@ export default function FulfillmentManagement() {
                       logistics and e-commerce operations, functioning as a
                       centralized hub where incoming orders are meticulously
                       processed, meticulously managed, and meticulously prepared
-                      for shipment to customers. At Patliputra Logistics, we
+                      for shipment to customers. At Ramchandra Transport, we
                       recognize the pivotal role that fulfillment-centers play
                       in the intricate web of supply chain management.
                       Therefore, we have developed a comprehensive suite of

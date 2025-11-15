@@ -123,7 +123,7 @@ export default function LastMileDelivery() {
                 Delivering Satisfaction, Every Mile, Every Time.
               </p>
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed">
-                Last mile delivery is the crucial final step in the logistics chain, involving the transportation of goods from a distribution center or warehouse to the end customer. At Patliputra Logistics, we specialize in providing efficient and reliable last mile delivery services that ensure your packages reach customers quickly and safely. Our comprehensive last mile solutions are designed to handle the complexities of urban delivery while maintaining the highest standards of service quality.
+                Last mile delivery is the crucial final step in the logistics chain, involving the transportation of goods from a distribution center or warehouse to the end customer. At Ramchandra Transport, we specialize in providing efficient and reliable last mile delivery services that ensure your packages reach customers quickly and safely. Our comprehensive last mile solutions are designed to handle the complexities of urban delivery while maintaining the highest standards of service quality.
               </p>
             </div>
           </div>

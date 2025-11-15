@@ -270,7 +270,6 @@ export default function Contact() {
                       <div>
                         <h4 className="font-semibold text-lg text-foreground mb-1">Address</h4>
                         <p className="text-muted-foreground text-lg">
-                          {process.env.NEXT_PUBLIC_COMPANY_NAME}<br />
                           {process.env.NEXT_PUBLIC_COMPANY_ADDRESS}
                         </p>
                       </div>

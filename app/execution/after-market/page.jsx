@@ -67,7 +67,7 @@ export default function AfterMarketManagement() {
                 Aftermarket Excellence: Let's Partner for Streamlined Supply Chain Execution
               </h2>
               <p className="text-gray-700 text-lg lg:text-xl leading-relaxed text-justify">
-                Aftermarket management encompasses the strategic oversight and execution of post-sale activities that extend throughout the entire product lifecycle. This comprehensive approach involves managing spare parts inventory, handling warranty claims, processing returns, and ensuring optimal customer support long after the initial sale. At Patliputra Logistics, we specialize in providing end-to-end aftermarket solutions that optimize inventory levels, reduce operational costs, and enhance customer satisfaction. Our aftermarket management services are designed to create sustainable revenue streams while maintaining cost-effective operations and ensuring long-term customer relationships.
+                Aftermarket management encompasses the strategic oversight and execution of post-sale activities that extend throughout the entire product lifecycle. This comprehensive approach involves managing spare parts inventory, handling warranty claims, processing returns, and ensuring optimal customer support long after the initial sale. At Ramchandra Transport, we specialize in providing end-to-end aftermarket solutions that optimize inventory levels, reduce operational costs, and enhance customer satisfaction. Our aftermarket management services are designed to create sustainable revenue streams while maintaining cost-effective operations and ensuring long-term customer relationships.
               </p>
             </div>
             <div className="order-1 lg:order-2">
